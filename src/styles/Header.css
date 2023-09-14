@@ -1,0 +1,28 @@
+#header {
+    margin-top: 0;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+#header button {
+    border-radius: 20px;
+    background-color: rgb(81, 81, 172);
+    padding: 7px 20px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+}

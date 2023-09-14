@@ -1,10 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import '../styles/index.css'
+import "../styles/Main.css";
+import Header from "./Header";
+import PersonalData from "./PersonalData";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+
+export default function Main() {
+
+    return (
+        <div id="main">
+            <Header />
+            <PersonalData />
+        </div>
+    );
+};
