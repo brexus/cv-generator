@@ -1,6 +1,8 @@
 import "../styles/Skills.css";
 
-export default function Skills() {
+export default function Skills({
+    setTitleSkillsState
+}) {
 
     return (
         <div className="component" id="skills">
@@ -9,6 +11,9 @@ export default function Skills() {
                <input 
                     type="text" 
                     placeholder="Title"
+                    onChange={(e) => {
+                        setTitleSkillsState(e.target.value);
+                    }}
                 />
 
             </div>
