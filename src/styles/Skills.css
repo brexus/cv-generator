@@ -1,3 +1,21 @@
 #skills {
     
 }
+
+#skills > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#skills > div > input {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#skills > div > input:nth-child(1) {
+    margin-top: 0;
+}
+

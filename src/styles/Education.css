@@ -1,3 +1,21 @@
 #education {
     
 }
+
+#education > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#education > div > input {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#education > div > input:nth-child(1) {
+    margin-top: 0;
+}
+
