@@ -1,0 +1,22 @@
+.workExperience-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.workExperience-item > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.workExperience-duration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workExperience-duration {
+    font-weight: 500;
+}

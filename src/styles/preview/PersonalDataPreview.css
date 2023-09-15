@@ -1,0 +1,25 @@
+#personalData-preview h1, 
+#personalData-preview h2, 
+#personalData-preview h3 {
+    margin: 0;
+}
+
+#personalData-preview {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#personalData-preview > h1 {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+#personalData-preview > h2 {
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.personalData-h3 {
+    font-weight: 500;
+    font-size: 1rem;
+}

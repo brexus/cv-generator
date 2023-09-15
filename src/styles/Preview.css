@@ -13,4 +13,26 @@
     height: 100%;
     aspect-ratio: 1 / 1.414;
     background-color: white;
+    color: black;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+}
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+#sheet > * {
+    width: 100%;
+}
+
+#cv-heading {
+    margin: 0;
+    text-align: center;
 }
