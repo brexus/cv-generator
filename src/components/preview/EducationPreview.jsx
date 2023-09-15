@@ -6,11 +6,14 @@ export default function EducationPreview() {
             <h1 className="section-heading">Education</h1>
             <div className="separator"></div>
 
-            <div className="education-item">
-                <p className="field-of-study">Informatyka</p>
-                <p className="name-of-university">Politechnika Lubelska</p>
-                <p className="education-duration">2020-present</p>
-            </div>
+            <p className="education-item">
+                <div>
+                    <span className="field-of-study">Informatyka,</span>
+                    <span className="name-of-university">Politechnika Lubelska</span> 
+                </div>
+
+                <span className="education-duration">2020-present</span> 
+            </p>
         </div>
     );
 };

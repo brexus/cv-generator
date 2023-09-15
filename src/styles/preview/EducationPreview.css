@@ -1,0 +1,23 @@
+.education-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.education-item > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-heading {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 10px 0 5px 0;
+}
+
+.field-of-study,
+.name-of-university {
+    margin-right: 5px;
+}
