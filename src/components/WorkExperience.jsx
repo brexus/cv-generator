@@ -2,9 +2,13 @@ import "../styles/WorkExperience.css";
 
 export default function WorkExperience({
     setCompanyNameState,
+    companyNameState,
     setCompanyAddressState,
+    companyAddressState,
     setJobTitleWorkExperienceState,
-    setDurationWorkExperienceState
+    jobTitleWorkExperienceState,
+    setDurationWorkExperienceState,
+    durationWorkExperienceState
 }) {
 
     return (
@@ -13,6 +17,7 @@ export default function WorkExperience({
             <div>
                <input 
                     type="text" 
+                    value={companyNameState}
                     placeholder="Company Name"
                     onChange={(e) => {
                         setCompanyNameState(e.target.value);
@@ -21,6 +26,7 @@ export default function WorkExperience({
 
                 <input 
                     type="text" 
+                    value={companyAddressState}
                     placeholder="Company Address"
                     onChange={(e) => {
                         setCompanyAddressState(e.target.value);
@@ -29,6 +35,7 @@ export default function WorkExperience({
 
                 <input 
                     type="text" 
+                    value={jobTitleWorkExperienceState}
                     placeholder="Job Title"
                     onChange={(e) => {
                         setJobTitleWorkExperienceState(e.target.value);
@@ -37,6 +44,7 @@ export default function WorkExperience({
 
                 <input 
                     type="text" 
+                    value={durationWorkExperienceState}
                     placeholder="Duration"
                     onChange={(e) => {
                         setDurationWorkExperienceState(e.target.value);

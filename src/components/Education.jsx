@@ -2,8 +2,13 @@ import "../styles/Education.css";
 
 export default function Education({
     setFieldOfStudyState,
+    fieldOfStudyState,
+
     setNameOfUniversityState,
-    setDurationEducationState
+    nameOfUniversityState,
+
+    setDurationEducationState,
+    durationEducationState,
 }) {
 
     return (
@@ -12,6 +17,7 @@ export default function Education({
             <div>
                <input 
                     type="text" 
+                    value={fieldOfStudyState}
                     placeholder="Field of study"
                     onChange={(e) => {
                         setFieldOfStudyState(e.target.value);
@@ -20,6 +26,7 @@ export default function Education({
 
                 <input 
                     type="text" 
+                    value={nameOfUniversityState}
                     placeholder="Name of university"
                     onChange={(e) => {
                         setNameOfUniversityState(e.target.value);
@@ -28,6 +35,7 @@ export default function Education({
 
                 <input 
                     type="text" 
+                    value={durationEducationState}
                     placeholder="Duration"
                     onChange={(e) => {
                         setDurationEducationState(e.target.value);

@@ -4,8 +4,12 @@ export default function WorkExperiencePreviewItem({jobTitle="-", companyName="-"
     return (
         <div className="workExperience-item">
             <div>
-                <span className="workExperience-job-title">{jobTitle}</span>
-                <span className="company-name">{companyName}</span>
+                <div>
+                    <span className="workExperience-job-title">{jobTitle}</span>
+                    {", "}
+                    <span className="company-name">{companyName}</span>
+                </div>
+
                 <span className="company-address">{companyAddress}</span>
             </div>
 

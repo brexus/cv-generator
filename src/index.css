@@ -1,5 +1,10 @@
-:root {
+* {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   font-weight: 400;
 
@@ -35,6 +40,12 @@ body {
   /* width: 100vw; */
 }
 
+#root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 #root > * {
   padding: 2rem;
 }
@@ -66,12 +77,11 @@ button:focus-visible {
 .component {
   background-color: #272727;
   border-radius: 25px;
-  padding: 30px 20px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 100%;
   margin-top: 2rem;
 }
 
@@ -81,11 +91,6 @@ button:focus-visible {
   font-size: 2rem;
   margin-right: 20px;
 
-}
-
-* {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  box-sizing: border-box;
 }
 
 input {

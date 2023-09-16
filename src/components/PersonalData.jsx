@@ -2,11 +2,22 @@ import "../styles/PersonalData.css";
 
 export default function PersonalData({
     setFullNameState,
+    fullNameState,
+
     setJobTitleState,
+    jobTitleState,
+
     setEmailState,
+    emailState,
+
     setPhoneState,
+    phoneState,
+
     setAddressState,
-    setDateOfBirthState
+    addressState,
+
+    setDateOfBirthState,
+    dateOfBirthState
 }) {
 
     return (
@@ -15,7 +26,8 @@ export default function PersonalData({
             <div>
 
                <input 
-                    type="text" 
+                    type="text"
+                    value={fullNameState}
                     placeholder="Full name"
                     onChange={(e) => {
                         setFullNameState(e.target.value);
@@ -24,6 +36,7 @@ export default function PersonalData({
 
                 <input 
                     type="text" 
+                    value={jobTitleState}
                     placeholder="Job title"
                     onChange={(e) => {
                         setJobTitleState(e.target.value);
@@ -32,6 +45,7 @@ export default function PersonalData({
 
                 <input 
                     type="text" 
+                    value={emailState}
                     placeholder="E-mail"
                     onChange={(e) => {
                         setEmailState(e.target.value);
@@ -40,6 +54,7 @@ export default function PersonalData({
 
                 <input 
                     type="text" 
+                    value={phoneState}
                     placeholder="Phone"
                     onChange={(e) => {
                         setPhoneState(e.target.value);
@@ -48,6 +63,7 @@ export default function PersonalData({
 
                 <input 
                     type="text" 
+                    value={addressState}
                     placeholder="Address"
                     onChange={(e) => {
                         setAddressState(e.target.value);
@@ -56,6 +72,7 @@ export default function PersonalData({
 
                 <input 
                     type="text" 
+                    value={dateOfBirthState}
                     placeholder="Date of birth"
                     onChange={(e) => {
                         setDateOfBirthState(e.target.value);

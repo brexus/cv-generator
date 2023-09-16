@@ -44,29 +44,36 @@ export default function Header({
     };
 
     const fullReset = () => {
-        setFullNameState("-");
-        setJobTitleState("-");
-        setEmailState("-");
-        setPhoneState("-");
-        setAddressState("-");
-        setDateOfBirthState("-");
-        setFieldOfStudyState("-");
-        setNameOfUniversityState("-");
-        setDurationEducationState("-");
-        setCompanyNameState("-");
-        setCompanyAddressState("-");
-        setJobTitleWorkExperienceState("-");
-        setDurationWorkExperienceState("-");
-        setTitleSkillsState("-");
+        setFullNameState("");
+        setJobTitleState("");
+        setEmailState("");
+        setPhoneState("");
+        setAddressState("");
+        setDateOfBirthState("");
+        setFieldOfStudyState("");
+        setNameOfUniversityState("");
+        setDurationEducationState("");
+        setCompanyNameState("");
+        setCompanyAddressState("");
+        setJobTitleWorkExperienceState("");
+        setDurationWorkExperienceState("");
+        setTitleSkillsState("");
+    };
+
+    const printPDF = () => {
+        const preview = document.getElementById("sheet");
+        console.log(preview);
+        window.print();
+        // preview.contentWindow.print();
     };
 
     return (
         <div className="component" id="header">
             <h1>CV Generator</h1>
             <div id="header-buttons">
-                <Button text="Save"/>
-                <Button text="Example" funct={loadExamplePreview}/>
-                <Button text="Reset" funct={fullReset}/>
+                <Button text="Save" funct={printPDF}/>
+                <Button text="Example" funct={loadExamplePreview} />
+                <Button text="Reset" funct={fullReset} />
             </div>
         </div>
     );
