@@ -1,105 +1,56 @@
 import { useState } from 'react';
+import React from 'react';
 import '../styles/App.css';
 import Main from './Main';
 import Preview from './Preview';
 
+
 export default function App() {
-    const [fullNameState, setFullNameState] = useState("");
-    const [jobTitleState, setJobTitleState] = useState("");
-    const [emailState, setEmailState] = useState("");
-    const [phoneState, setPhoneState] = useState("");
-    const [addressState, setAddressState] = useState("");
-    const [dateOfBirthState, setDateOfBirthState] = useState("");
 
-    const [fieldOfStudyState, setFieldOfStudyState] = useState("");
-    const [nameOfUniversityState, setNameOfUniversityState] = useState("");
-    const [durationEducationState, setDurationEducationState] = useState("");
+    const educationDataFF = (id, field, name, duration) => {
+        
+        return { id, field, name, duration };
+    };
 
+    const workExperienceFF = (id, name, address, jobTitle, duration) => {
+        
+        return { id, name, address, jobTitle, duration };
+    };
 
-    const [companyNameState, setCompanyNameState] = useState("");
-    const [companyAddressState, setCompanyAddressState] = useState("");
-    const [jobTitleWorkExperienceState, setJobTitleWorkExperienceState] = useState("");
-    const [durationWorkExperienceState, setDurationWorkExperienceState] = useState("");
+    const skillsFF = (id, title) => {
+        
+        return { id, title };
+    };
 
-    const [titleSkillsState, setTitleSkillsState] = useState("");
+    const [dataCV, setDataCV] = useState({
+        personalData: {
+            fullName: "",
+            jobTitle: "",
+            email: "",
+            phone: "",
+            address: "",
+            dateOB: ""
+        },
 
+        educationData: [
+            educationDataFF(0, "", "", "")
+        ],
+
+        workExperience: [
+            workExperienceFF(0, "", "", "", "")
+        ],
+
+        skillsData: [
+            skillsFF(0, "")
+            // skillsFF(1, "Obsluga programow MS Office")
+        ]
+    });
 
     return (
         <>
-            <Main
-                // PERSONAL DATA
-                setFullNameState={setFullNameState}
-                fullNameState={fullNameState}
+            <Main dataCV={dataCV} setDataCV={setDataCV} skillsFF={skillsFF} />
 
-                setJobTitleState={setJobTitleState}
-                jobTitleState={jobTitleState}
-
-                setEmailState={setEmailState}
-                emailState={emailState}
-
-                setPhoneState={setPhoneState}
-                phoneState={phoneState}
-
-                setAddressState={setAddressState}
-                addressState={addressState}
-
-                setDateOfBirthState={setDateOfBirthState}
-                dateOfBirthState={dateOfBirthState}
-
-                // EDUCATION
-                setFieldOfStudyState={setFieldOfStudyState}
-                fieldOfStudyState={fieldOfStudyState}
-
-                setNameOfUniversityState={setNameOfUniversityState}
-                nameOfUniversityState={nameOfUniversityState}
-
-                setDurationEducationState={setDurationEducationState}
-                durationEducationState={durationEducationState}
-
-
-                // WORK EXPERIENCE
-                setCompanyNameState={setCompanyNameState}
-                companyNameState={companyNameState}
-
-                setCompanyAddressState={setCompanyAddressState}
-                companyAddressState={companyAddressState}
-
-                setJobTitleWorkExperienceState={setJobTitleWorkExperienceState}
-                jobTitleWorkExperienceState={jobTitleWorkExperienceState}
-
-                setDurationWorkExperienceState={setDurationWorkExperienceState}
-                durationWorkExperienceState={durationWorkExperienceState}
-
-
-                // SKILLS
-                setTitleSkillsState={setTitleSkillsState}
-                titleSkillsState={titleSkillsState}
-
-            />
-
-            <Preview 
-                // PERSONAL DATA
-                fullNameState={fullNameState}
-                jobTitleState={jobTitleState}
-                emailState={emailState}
-                phoneState={phoneState}
-                addressState={addressState}
-                dateOfBirthState={dateOfBirthState}
-
-                // EDUCATION
-                fieldOfStudyState={fieldOfStudyState}
-                nameOfUniversityState={nameOfUniversityState}
-                durationEducationState={durationEducationState}
-
-                // WORK EXPERIENCE
-                companyNameState={companyNameState}
-                companyAddressState={companyAddressState}
-                jobTitleWorkExperienceState={jobTitleWorkExperienceState}
-                durationWorkExperienceState={durationWorkExperienceState}
-
-                // SKILLS
-                titleSkillsState={titleSkillsState}
-            />
+            {/* <Preview dataCV={dataCV} setDataCV={setDataCV}/> */}
         </>
     );
 };

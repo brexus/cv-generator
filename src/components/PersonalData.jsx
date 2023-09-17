@@ -1,85 +1,107 @@
 import "../styles/PersonalData.css";
 
-export default function PersonalData({
-    setFullNameState,
-    fullNameState,
-
-    setJobTitleState,
-    jobTitleState,
-
-    setEmailState,
-    emailState,
-
-    setPhoneState,
-    phoneState,
-
-    setAddressState,
-    addressState,
-
-    setDateOfBirthState,
-    dateOfBirthState
-}) {
+export default function PersonalData({dataCV, setDataCV}) {
 
     return (
-        <div className="component" id="personalData">
-            <h1>Personal Data</h1>
-            <div>
+        <div>
 
-               <input 
-                    type="text"
-                    value={fullNameState}
-                    placeholder="Full name"
-                    onChange={(e) => {
-                        setFullNameState(e.target.value);
-                    }}
-                />
+            <input 
+                type="text"
 
-                <input 
-                    type="text" 
-                    value={jobTitleState}
-                    placeholder="Job title"
-                    onChange={(e) => {
-                        setJobTitleState(e.target.value);
-                    }}
-                />
+                placeholder="Full name"
+                onChange={(e) => {
 
-                <input 
-                    type="text" 
-                    value={emailState}
-                    placeholder="E-mail"
-                    onChange={(e) => {
-                        setEmailState(e.target.value);
-                    }}
-                />
+                    setDataCV({
+                        ...dataCV,
+                        personalData: {
+                            ...dataCV.personalData,
+                            fullName: e.target.value
+                        }
+                    })
+                }}
+            />
 
-                <input 
-                    type="text" 
-                    value={phoneState}
-                    placeholder="Phone"
-                    onChange={(e) => {
-                        setPhoneState(e.target.value);
-                    }}
-                />
+            <input 
+                type="text" 
+                
+                placeholder="Job title"
+                onChange={(e) => {
 
-                <input 
-                    type="text" 
-                    value={addressState}
-                    placeholder="Address"
-                    onChange={(e) => {
-                        setAddressState(e.target.value);
-                    }}
-                />
+                    setDataCV({
+                        ...dataCV,
+                        personalData: {
+                            ...dataCV.personalData,
+                            jobTitle: e.target.value
+                        }
+                    })
+                }}
+            />
 
-                <input 
-                    type="text" 
-                    value={dateOfBirthState}
-                    placeholder="Date of birth"
-                    onChange={(e) => {
-                        setDateOfBirthState(e.target.value);
-                    }}
-                />
+            <input 
+                type="text" 
+                
+                placeholder="E-mail"
+                onChange={(e) => {
 
-            </div>
+                    setDataCV({
+                        ...dataCV,
+                        personalData: {
+                            ...dataCV.personalData,
+                            email: e.target.value
+                        }
+                    })
+                }}
+            />
+
+            <input 
+                type="text" 
+                
+                placeholder="Phone"
+                onChange={(e) => {
+
+                    setDataCV({
+                        ...dataCV,
+                        personalData: {
+                            ...dataCV.personalData,
+                            phone: e.target.value
+                        }
+                    })
+                }}
+            />
+
+            <input 
+                type="text" 
+                
+                placeholder="Address"
+                onChange={(e) => {
+
+                    setDataCV({
+                        ...dataCV,
+                        personalData: {
+                            ...dataCV.personalData,
+                            address: e.target.value
+                        }
+                    })
+                }}
+            />
+
+            <input 
+                type="text" 
+                
+                placeholder="Date of birth"
+                onChange={(e) => {
+
+                    setDataCV({
+                        ...dataCV,
+                        personalData: {
+                            ...dataCV.personalData,
+                            dateOB: e.target.value
+                        }
+                    })
+                }}
+            />
+
         </div>
     );
 };
+

@@ -1,19 +1,19 @@
 import "../../styles/preview/WorkExperiencePreviewItem.css";
 
-export default function WorkExperiencePreviewItem({jobTitle="-", companyName="-", companyAddress="-", duration="-"}) {
+export default function WorkExperiencePreviewItem({dataCV, setDataCV}) {
     return (
         <div className="workExperience-item">
             <div>
                 <div>
-                    <span className="workExperience-job-title">{jobTitle}</span>
+                    <span className="workExperience-job-title">{}</span>
                     {", "}
-                    <span className="company-name">{companyName}</span>
+                    <span className="company-name">{}</span>
                 </div>
 
-                <span className="company-address">{companyAddress}</span>
+                <span className="company-address">{}</span>
             </div>
 
-            <span className="workExperience-duration">{duration}</span>
+            <span className="workExperience-duration">{}</span>
 
         </div>
     );

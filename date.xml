@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataCV>
+    <personalData>
+        <fullName> </fullName>
+        <jobTitle> </jobTitle>
+        <email> </email>
+        <phone> </phone>
+        <address> </address>
+        <dateOB> </dateOB>
+    </personalData>
+
+
+    <educationData>
+        <item>
+            <id> </id>
+            <field> </field>
+            <name> </name>
+            <duration> </duration>
+        </item>
+
+        <item>
+            <id> </id>
+            <field> </field>
+            <name> </name>
+            <duration> </duration>
+        </item>
+
+    </educationData>
+
+
+    <workExperienceData>
+        <item>
+            <id> </id>
+            <name> </name>
+            <address> </address>
+            <jobTitle> </jobTitle>
+            <dutation> </dutation>
+        </item>
+
+        <item>
+            <id> </id>
+            <name> </name>
+            <address> </address>
+            <jobTitle> </jobTitle>
+            <dutation> </dutation>
+        </item>
+
+    </workExperienceData>
+
+
+    <skillsData>
+        <item>
+            <id> </id>
+            <title> </title>
+        </item>
+
+        <item>
+            <id> </id>
+            <title> </title>
+        </item>
+
+    </skillsData>
+</dataCV>

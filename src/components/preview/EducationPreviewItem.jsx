@@ -1,14 +1,14 @@
 import "../../styles/preview/EducationPreviewItem.css";
 
-export default function EducationPreviewItem({fieldOfStudy="-", nameOfUniversity="-", educationDuration="-"}) {
+export default function EducationPreviewItem({dataCV, setDataCV}) {
     return (
         <div className="education-item">
             <p>
-                <span className="field-of-study">{fieldOfStudy},</span>
-                <span className="name-of-university">{nameOfUniversity}</span> 
+                <span className="field-of-study">{},</span>
+                <span className="name-of-university">{}</span> 
             </p>
 
-            <span className="education-duration">{educationDuration}</span> 
+            <span className="education-duration">{}</span> 
         </div>
     );
 };

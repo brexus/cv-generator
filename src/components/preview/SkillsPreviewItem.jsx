@@ -1,9 +1,11 @@
 import "../../styles/preview/SkillsPreviewItem.css";
 
-export default function SkillsPreviewItem({skillsTitle="-"}) {
+export default function SkillsPreviewItem({dataCV, setDataCV, index}) {
     return (
         <ul className="skills-item">
-            <li className="skills-title">{skillsTitle}</li>
+            <li className="skills-title" key={index}>
+                {dataCV.skillsData[index].title}
+            </li>
         </ul>
     );
 };

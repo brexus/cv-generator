@@ -5,130 +5,67 @@ import Education from "./Education";
 import WorkExperience from "./WorkExperience";
 import Skills from "./Skills";
 
-export default function Main({
-    // PERSONAL DATA
-    setFullNameState,
-    fullNameState,
-    setJobTitleState,
-    jobTitleState,
-    setEmailState,
-    emailState,
-    setPhoneState,
-    phoneState,
-    setAddressState,
-    addressState,
-    setDateOfBirthState,
-    dateOfBirthState,
 
-    // EDUCATION
-    setFieldOfStudyState,
-    fieldOfStudyState,
-    setNameOfUniversityState,
-    nameOfUniversityState,
-    setDurationEducationState,
-    durationEducationState,
 
-    // WORK EXPERIENCE
-    setCompanyNameState,
-    companyNameState,
-    setCompanyAddressState,
-    companyAddressState,
-    setJobTitleWorkExperienceState,
-    jobTitleWorkExperienceState,
-    setDurationWorkExperienceState,
-    durationWorkExperienceState,
-
-    // SKILLS
-    setTitleSkillsState
-}) {
-
-    let skills_tab = [""];
-
-    // const addNewSkill = () => {
-    //     setTitleSkillsState([])
-    // };
-
+export default function Main({dataCV, setDataCV, skillsFF}) {
 
     return (
         <div id="main">
-            <Header 
-                setFullNameState={setFullNameState}
-                setJobTitleState={setJobTitleState}
-                setEmailState={setEmailState}
-                setPhoneState={setPhoneState}
-                setAddressState={setAddressState}
-                setDateOfBirthState={setDateOfBirthState}
-                setFieldOfStudyState={setFieldOfStudyState}
-                setNameOfUniversityState={setNameOfUniversityState}
-                setDurationEducationState={setDurationEducationState}
-                setCompanyNameState={setCompanyNameState}
-                setCompanyAddressState={setCompanyAddressState}
-                setJobTitleWorkExperienceState={setJobTitleWorkExperienceState}
-                setDurationWorkExperienceState={setDurationWorkExperienceState}
-                setTitleSkillsState={setTitleSkillsState}
-            />
+            <Header dataCV={dataCV} setDataCV={setDataCV}/>
 
-            <PersonalData 
-                setFullNameState={setFullNameState}
-                fullNameState={fullNameState}
 
-                setJobTitleState={setJobTitleState}
-                jobTitleState={jobTitleState}
+            <div className="component" id="personalData">
+                <h1>Personal Data</h1>
+                <PersonalData dataCV={dataCV} setDataCV={setDataCV} />
+            </div>
+            
 
-                setEmailState={setEmailState}
-                emailState={emailState}
+            <div className="component" id="education">
+                <h1>Education</h1>
+                <div>
+                    <Education dataCV={dataCV} setDataCV={setDataCV} />
+                </div>
 
-                setPhoneState={setPhoneState}
-                phoneState={phoneState}
+                <button type="button" id="btn-add-education">Add new</button>
+            </div>
 
-                setAddressState={setAddressState}
-                addressState={addressState}
 
-                setDateOfBirthState={setDateOfBirthState}
-                dateOfBirthState={dateOfBirthState}
-            />
+            <div className="component" id="workExperience">
+                <h1>Work Experience</h1>
+                <div>
+                    <WorkExperience dataCV={dataCV} setDataCV={setDataCV}/>
+                </div>
 
-            <Education 
-                setFieldOfStudyState={setFieldOfStudyState}
-                fieldOfStudyState={fieldOfStudyState}
-
-                setNameOfUniversityState={setNameOfUniversityState}
-                nameOfUniversityState={nameOfUniversityState}
-
-                setDurationEducationState={setDurationEducationState}
-                durationEducationState={durationEducationState}
-            />
-
-            <WorkExperience 
-                setCompanyNameState={setCompanyNameState}
-                companyNameState={companyNameState}
-
-                setCompanyAddressState={setCompanyAddressState}
-                companyAddressState={companyAddressState}
-
-                setJobTitleWorkExperienceState={setJobTitleWorkExperienceState}
-                jobTitleWorkExperienceState={jobTitleWorkExperienceState}
-
-                setDurationWorkExperienceState={setDurationWorkExperienceState}
-                durationWorkExperienceState={durationWorkExperienceState}
-            />
-
+                <button type="button" id="btn-add-workExperience">Add new</button>
+            </div>
+            
 
             <div className="component" id="skills">
                 <h1>Skills</h1>
                 <div>
-                        <Skills 
-                            setTitleSkillsState={setTitleSkillsState}
-                        />
-
-                    {/* {skills_tab.map((skill) => {
+                    {dataCV.skillsData.map((item, index) => {
                         return (
-                            
+                            <Skills key={"skill-" + item.id} dataCV={dataCV} setDataCV={setDataCV} index={item.id}/>
                         );
-                    })} */}
-
-                    {/* <button onClick={addNewSkill()} type="text">ADD</button> */}
+                    })}
+                    
                 </div>
+
+                <button 
+                    type="button" 
+                    id="btn-add-skill" 
+                    onClick={() => {
+                        setDataCV({
+                            ...dataCV,
+                            skillsData: [
+                                ...dataCV.skillsData,
+                                skillsFF(`skill-${(dataCV.skillsData[(dataCV.skillsData.length)-1].id)+1}`, "")
+                            ]
+                        })
+                    }}
+                >
+                    Add new
+                </button>
             </div>
 
         </div>
