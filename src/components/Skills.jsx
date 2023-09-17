@@ -14,7 +14,7 @@ export default function Skills({dataCV, setDataCV, index}) {
                     
                     setDataCV({
                         ...dataCV,
-                        skillsData: 
+                        skillsData:
                             [
                                 dataCV.skillsData.map((item) => {
                                     if(item.id === index) {
@@ -25,11 +25,7 @@ export default function Skills({dataCV, setDataCV, index}) {
                                     }
                         
                                     return item;
-                                })
-                                
-
-                                // ...dataCV.skillsData,
-                                
+                                })                             
                             ]
                     })
                 }}

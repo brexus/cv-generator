@@ -59,9 +59,10 @@ export default function Main({dataCV, setDataCV, skillsFF}) {
                             ...dataCV,
                             skillsData: [
                                 ...dataCV.skillsData,
-                                skillsFF(`skill-${(dataCV.skillsData[(dataCV.skillsData.length)-1].id)+1}`, "")
+                                skillsFF((dataCV.skillsData[(dataCV.skillsData.length)-1].id)+1, "")
                             ]
                         })
+                        console.log(dataCV.skillsData)
                     }}
                 >
                     Add new
