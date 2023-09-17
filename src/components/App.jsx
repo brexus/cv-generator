@@ -50,7 +50,7 @@ export default function App() {
         <>
             <Main dataCV={dataCV} setDataCV={setDataCV} skillsFF={skillsFF} />
 
-            {/* <Preview dataCV={dataCV} setDataCV={setDataCV}/> */}
+            <Preview dataCV={dataCV} setDataCV={setDataCV}/>
         </>
     );
 };
