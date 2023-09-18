@@ -22,35 +22,41 @@ export default function App() {
         return { id, title };
     };
 
-    const [dataCV, setDataCV] = useState({
-        personalData: {
-            fullName: "",
-            jobTitle: "",
-            email: "",
-            phone: "",
-            address: "",
-            dateOB: ""
-        },
+    const setInitialDataCV = () => {
+        return (
+            {
+                personalData: {
+                    fullName: "",
+                    jobTitle: "",
+                    email: "",
+                    phone: "",
+                    address: "",
+                    dateOB: ""
+                },
+        
+                educationData: [
+                    educationDataFF(0, "", "", "")
+                ],
+        
+                workExperienceData: [
+                    workExperienceFF(0, "", "", "", "")
+                ],
+        
+                skillsData: [
+                    skillsFF(0, "")
+                ]
+            }
+        );
+    }
 
-        educationData: [
-            educationDataFF(0, "", "", "")
-        ],
 
-        workExperience: [
-            workExperienceFF(0, "", "", "", "")
-        ],
-
-        skillsData: [
-            skillsFF(0, "")
-            // skillsFF(1, "Obsluga programow MS Office")
-        ]
-    });
+    const [dataCV, setDataCV] = useState(setInitialDataCV);
 
     return (
         <>
-            <Main dataCV={dataCV} setDataCV={setDataCV} skillsFF={skillsFF} />
+            <Main dataCV={dataCV} setDataCV={setDataCV} skillsFF={skillsFF} educationDataFF={educationDataFF} workExperienceFF={workExperienceFF} setInitialDataCV={setInitialDataCV}/>
 
-            <Preview dataCV={dataCV} setDataCV={setDataCV}/>
+            <Preview dataCV={dataCV} setDataCV={setDataCV} />
         </>
     );
 };

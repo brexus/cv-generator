@@ -29,7 +29,7 @@ export default function Skills({dataCV, setDataCV, index}) {
                 }}
             />
 
-            <button type="button">
+            <button type="button" className="button-skill-x">
                 X
             </button>
         </div>

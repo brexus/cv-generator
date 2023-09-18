@@ -7,7 +7,7 @@ export default function PersonalData({dataCV, setDataCV}) {
 
             <input 
                 type="text"
-
+                value={dataCV.personalData.fullName}
                 placeholder="Full name"
                 onChange={(e) => {
 
@@ -23,7 +23,7 @@ export default function PersonalData({dataCV, setDataCV}) {
 
             <input 
                 type="text" 
-                
+                value={dataCV.personalData.jobTitle}
                 placeholder="Job title"
                 onChange={(e) => {
 
@@ -39,7 +39,7 @@ export default function PersonalData({dataCV, setDataCV}) {
 
             <input 
                 type="text" 
-                
+                value={dataCV.personalData.email}
                 placeholder="E-mail"
                 onChange={(e) => {
 
@@ -55,7 +55,7 @@ export default function PersonalData({dataCV, setDataCV}) {
 
             <input 
                 type="text" 
-                
+                value={dataCV.personalData.phone}
                 placeholder="Phone"
                 onChange={(e) => {
 
@@ -71,7 +71,7 @@ export default function PersonalData({dataCV, setDataCV}) {
 
             <input 
                 type="text" 
-                
+                value={dataCV.personalData.address}
                 placeholder="Address"
                 onChange={(e) => {
 
@@ -87,7 +87,7 @@ export default function PersonalData({dataCV, setDataCV}) {
 
             <input 
                 type="text" 
-                
+                value={dataCV.personalData.dateOB}
                 placeholder="Date of birth"
                 onChange={(e) => {
 

@@ -16,13 +16,24 @@ export default function Preview({dataCV, setDataCV}) {
                 <div id="education-preview">
                     <h1 className="section-heading">Education</h1>
                     <div className="separator"></div>
-                    <EducationPreviewItem dataCV={dataCV} setDataCV={setDataCV}/>
+
+                    {dataCV.educationData.map((item, index) => {
+                        return (
+                            <EducationPreviewItem key={"educationPreview" + index} dataCV={dataCV} setDataCV={setDataCV} index={index}/>
+                        );
+                    })}
+                    
                 </div>
 
                 <div id="workExperience-preview">
                     <h1 className="section-heading">Work Experience</h1>
                     <div className="separator"></div>
-                    <WorkExperiencePreviewItem dataCV={dataCV} setDataCV={setDataCV}/>
+
+                    {dataCV.workExperienceData.map((item, index) => {
+                        return (
+                            <WorkExperiencePreviewItem key={"workExperiencePreview" + index} dataCV={dataCV} setDataCV={setDataCV} index={index}/>
+                        );
+                    })}
                 </div>
 
                 <div id="skills-preview">
@@ -31,7 +42,7 @@ export default function Preview({dataCV, setDataCV}) {
                     
                     {dataCV.skillsData.map((item, index) => {
                         return (
-                            <SkillsPreviewItem key={index} dataCV={dataCV} setDataCV={setDataCV} index={index}/>
+                            <SkillsPreviewItem key={"skillsPreview" + index} dataCV={dataCV} setDataCV={setDataCV} index={index}/>
                         );
                     })}
                     
