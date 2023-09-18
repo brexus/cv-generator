@@ -6,16 +6,16 @@ export default function Skills({dataCV, setDataCV, index}) {
 
 
     return (
-        <>
+        <div>
             <input 
                 type="text"
+                value={dataCV.skillsData[index].title}
                 placeholder="Title"
                 onChange={(e) => {
                     
                     setDataCV({
                         ...dataCV,
                         skillsData:
-                            
                             dataCV.skillsData.map((item) => {
                                 if(item.id === index) {
                                     return {
@@ -23,14 +23,16 @@ export default function Skills({dataCV, setDataCV, index}) {
                                         title: e.target.value
                                     }
                                 }
-                    
                                 return item;
-                            })                             
-                            
+                            })                            
                     })
                 }}
             />
-        </>
+
+            <button type="button">
+                X
+            </button>
+        </div>
     );
 };
 
