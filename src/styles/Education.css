@@ -1,5 +1,6 @@
 #education {
-    
+    display: flex;
+    flex-direction: column;
 }
 
 #education > div {
@@ -10,12 +11,32 @@
     width: 100%;
 }
 
-#education > div > input {
+#education > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     width: 100%;
-    margin-top: 20px;
 }
 
-#education > div > input:nth-child(1) {
-    margin-top: 0;
+#education > div > div > input {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
+#education h3 {
+    margin: 0;
+}
+
+#btn-add-education {
+    border-radius: 20px;
+    background-color: rgb(81, 81, 172);
+    padding: 7px 20px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
