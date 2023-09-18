@@ -1,5 +1,6 @@
 #workExperience {
-    
+    display: flex;
+    flex-direction: column;
 }
 
 #workExperience > div {
@@ -10,12 +11,34 @@
     width: 100%;
 }
 
-#workExperience > div > input {
+#workExperience > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     width: 100%;
-    margin-top: 20px;
 }
 
-#workExperience > div > input:nth-child(1) {
-    margin-top: 0;
+#workExperience > div > div > input {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+#workExperience h3 {
+    margin: 0;
+}
+
+#btn-add-workExperience {
+    border-radius: 20px;
+    background-color: rgb(81, 81, 172);
+    padding: 7px 20px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
