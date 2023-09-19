@@ -4,7 +4,28 @@ export default function WorkExperience({dataCV, setDataCV, index}) {
 
     return (
         <div>
-            <h3>#{index+1}</h3>
+            <div className="component-title-container">
+                <h3>#{index+1}</h3>
+                <button 
+                    type="button" 
+                    className="button-x"
+                    onClick={() => {
+                        setDataCV({
+                            ...dataCV,
+                            workExperienceData: 
+                                dataCV.workExperienceData.filter((item, i) => {
+                                    if((dataCV.workExperienceData.length < 2) || (i !== index)) {
+                                        return item;
+                                    }
+                                }) 
+                        })
+
+                    }}
+                >
+                    X
+                </button>
+            </div>
+
             <input 
                 type="text" 
                 value={dataCV.workExperienceData[index].name}
@@ -13,8 +34,8 @@ export default function WorkExperience({dataCV, setDataCV, index}) {
                     setDataCV({
                         ...dataCV,
                         workExperienceData:
-                            dataCV.workExperienceData.map((item) => {
-                                if(item.id === index) {
+                            dataCV.workExperienceData.map((item, i) => {
+                                if(i === index) {
                                     return {
                                         ...item, 
                                         name: e.target.value
@@ -34,8 +55,8 @@ export default function WorkExperience({dataCV, setDataCV, index}) {
                     setDataCV({
                         ...dataCV,
                         workExperienceData:
-                            dataCV.workExperienceData.map((item) => {
-                                if(item.id === index) {
+                            dataCV.workExperienceData.map((item, i) => {
+                                if(i === index) {
                                     return {
                                         ...item, 
                                         address: e.target.value
@@ -55,8 +76,8 @@ export default function WorkExperience({dataCV, setDataCV, index}) {
                     setDataCV({
                         ...dataCV,
                         workExperienceData:
-                            dataCV.workExperienceData.map((item) => {
-                                if(item.id === index) {
+                            dataCV.workExperienceData.map((item, i) => {
+                                if(i === index) {
                                     return {
                                         ...item, 
                                         jobTitle: e.target.value
@@ -76,8 +97,8 @@ export default function WorkExperience({dataCV, setDataCV, index}) {
                     setDataCV({
                         ...dataCV,
                         workExperienceData:
-                            dataCV.workExperienceData.map((item) => {
-                                if(item.id === index) {
+                            dataCV.workExperienceData.map((item, i) => {
+                                if(i === index) {
                                     return {
                                         ...item, 
                                         duration: e.target.value

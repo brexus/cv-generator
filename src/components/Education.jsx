@@ -4,7 +4,28 @@ export default function Education({dataCV, setDataCV, index}) {
 
     return (
         <div>
-            <h3>#{index+1}</h3>
+            <div className="component-title-container">
+                <h3>#{index+1}</h3>
+                <button 
+                    type="button" 
+                    className="button-x"
+                    onClick={() => {
+                        setDataCV({
+                            ...dataCV,
+                            educationData: 
+                                dataCV.educationData.filter((item, i) => {
+                                    if((dataCV.educationData.length < 2) || (i !== index)) {
+                                        return item;
+                                    }
+                                }) 
+                        })
+
+                    }}
+                >
+                    X
+                </button>
+            </div>
+            
             <input 
                 type="text" 
                 value={dataCV.educationData[index].field}
@@ -13,8 +34,8 @@ export default function Education({dataCV, setDataCV, index}) {
                     setDataCV({
                         ...dataCV,
                         educationData:
-                            dataCV.educationData.map((item) => {
-                                if(item.id === index) {
+                            dataCV.educationData.map((item, i) => {
+                                if(i === index) {
                                     return {
                                         ...item, 
                                         field: e.target.value
@@ -23,7 +44,6 @@ export default function Education({dataCV, setDataCV, index}) {
                                 return item;
                             })                            
                     })
-
                 }}
             />
 
@@ -35,8 +55,8 @@ export default function Education({dataCV, setDataCV, index}) {
                     setDataCV({
                         ...dataCV,
                         educationData:
-                            dataCV.educationData.map((item) => {
-                                if(item.id === index) {
+                            dataCV.educationData.map((item, i) => {
+                                if(i === index) {
                                     return {
                                         ...item, 
                                         name: e.target.value
@@ -56,8 +76,8 @@ export default function Education({dataCV, setDataCV, index}) {
                     setDataCV({
                         ...dataCV,
                         educationData:
-                            dataCV.educationData.map((item) => {
-                                if(item.id === index) {
+                            dataCV.educationData.map((item, i) => {
+                                if(i === index) {
                                     return {
                                         ...item, 
                                         duration: e.target.value

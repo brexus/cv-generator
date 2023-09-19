@@ -70,7 +70,8 @@ export default function App() {
     
     mediaQuery.addEventListener('change', (e) => { handleMediaQuery(e)});
     
-    
+
+
     return (
         <>
             <Main dataCV={dataCV} setDataCV={setDataCV} skillsFF={skillsFF} educationDataFF={educationDataFF} workExperienceFF={workExperienceFF} setInitialDataCV={setInitialDataCV} isSmallScreen={isSmallScreen} isPreview={isPreview}/>

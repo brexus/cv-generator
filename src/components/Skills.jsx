@@ -2,9 +2,6 @@ import "../styles/Skills.css";
 import React from "react";
 export default function Skills({dataCV, setDataCV, index}) {
     
-    // console.log(dataCV.skillsData[index])
-
-
     return (
         <div>
             <input 
@@ -12,12 +9,11 @@ export default function Skills({dataCV, setDataCV, index}) {
                 value={dataCV.skillsData[index].title}
                 placeholder="Title"
                 onChange={(e) => {
-                    
                     setDataCV({
                         ...dataCV,
                         skillsData:
-                            dataCV.skillsData.map((item) => {
-                                if(item.id === index) {
+                            dataCV.skillsData.map((item, i) => {
+                                if(i === index) {
                                     return {
                                         ...item, 
                                         title: e.target.value
@@ -29,7 +25,23 @@ export default function Skills({dataCV, setDataCV, index}) {
                 }}
             />
 
-            <button type="button" className="button-skill-x">
+            <button 
+                type="button" 
+                className="button-x"
+                onClick={() => {
+                    setDataCV({
+                        ...dataCV,
+                        skillsData: 
+                            dataCV.skillsData.filter((item, i) => {
+                                if((dataCV.skillsData.length < 2) || (i !== index)) {
+                                    return item;
+                                }
+                            }) 
+                    })
+
+                }}
+
+            >
                 X
             </button>
         </div>

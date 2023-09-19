@@ -21,27 +21,9 @@
 
 #skills > div > div > input {
     width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
-#skills > div > div > input:nth-child(1) {
-    margin-top: 0;
-}
-
-#btn-add-skill {
-    border-radius: 20px;
-    background-color: rgb(81, 81, 172);
-    padding: 7px 20px;
-    margin: 0 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.button-skill-x {
-    background-color: transparent;
-    padding: 5px 10px;
+#skills > h1 {
+    margin-bottom: 20px;
 }

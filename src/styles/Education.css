@@ -28,15 +28,3 @@
 #education h3 {
     margin: 0;
 }
-
-#btn-add-education {
-    border-radius: 20px;
-    background-color: rgb(81, 81, 172);
-    padding: 7px 20px;
-    margin: 0 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}

@@ -6,11 +6,13 @@ import WorkExperience from "./WorkExperience";
 import Skills from "./Skills";
 
 
-
-export default function Main({dataCV, setDataCV, skillsFF, educationDataFF, workExperienceFF, setInitialDataCV}) {
-
+export default function Main({dataCV, setDataCV, skillsFF, educationDataFF, workExperienceFF, setInitialDataCV, isSmallScreen, isPreview}) {
+    
     return (
-        <div id="main">
+        <div id="main" 
+            style={{
+                display: (isSmallScreen && isPreview) ? "none" : "flex"
+            }}>
             <Header dataCV={dataCV} setDataCV={setDataCV} setInitialDataCV={setInitialDataCV} skillsFF={skillsFF} educationDataFF={educationDataFF} workExperienceFF={workExperienceFF}/>
 
 
@@ -26,7 +28,7 @@ export default function Main({dataCV, setDataCV, skillsFF, educationDataFF, work
 
                     {dataCV.educationData.map((item, index) => {
                         return (
-                            <Education key={"education-" + item.id} dataCV={dataCV} setDataCV={setDataCV} index={item.id}/>
+                            <Education key={"education-" + item.id} dataCV={dataCV} setDataCV={setDataCV} index={index}/>
                         );
                     })}
                     
@@ -35,7 +37,7 @@ export default function Main({dataCV, setDataCV, skillsFF, educationDataFF, work
 
                 <button 
                     type="button" 
-                    id="btn-add-education"
+                    className="button-add-new"
                     onClick={() => {
                         setDataCV({
                             ...dataCV,
@@ -56,7 +58,7 @@ export default function Main({dataCV, setDataCV, skillsFF, educationDataFF, work
                 <div>
                     {dataCV.workExperienceData.map((item, index) => {
                         return (
-                            <WorkExperience key={"workExperience-" + item.id} dataCV={dataCV} setDataCV={setDataCV} index={item.id}/>
+                            <WorkExperience key={"workExperience-" + item.id} dataCV={dataCV} setDataCV={setDataCV} index={index}/>
                         );
                     })}
                     
@@ -64,7 +66,7 @@ export default function Main({dataCV, setDataCV, skillsFF, educationDataFF, work
 
                 <button 
                     type="button" 
-                    id="btn-add-workExperience"
+                    className="button-add-new"
                     onClick={() => {
                         setDataCV({
                             ...dataCV,
@@ -85,8 +87,10 @@ export default function Main({dataCV, setDataCV, skillsFF, educationDataFF, work
                 <h1>Skills</h1>
                 <div>
                     {dataCV.skillsData.map((item, index) => {
+
                         return (
-                            <Skills key={"skill-" + item.id} dataCV={dataCV} setDataCV={setDataCV} index={item.id}/>
+                            
+                            <Skills key={"skill-" + item.id} dataCV={dataCV} setDataCV={setDataCV} index={index}/>
                         );
                     })}
                     
@@ -94,7 +98,7 @@ export default function Main({dataCV, setDataCV, skillsFF, educationDataFF, work
 
                 <button 
                     type="button" 
-                    id="btn-add-skill" 
+                    className="button-add-new"
                     onClick={() => {
                         setDataCV({
                             ...dataCV,
