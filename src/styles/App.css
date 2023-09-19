@@ -1,6 +1,11 @@
 #root {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 100vw;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+}
+  
+#root > * {
+    padding: 2rem;
 }

@@ -25,6 +25,10 @@
     margin-bottom: 10px;
 }
 
+#skills > div > div > input:nth-child(1) {
+    margin-top: 0;
+}
+
 #btn-add-skill {
     border-radius: 20px;
     background-color: rgb(81, 81, 172);

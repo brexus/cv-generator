@@ -1,9 +1,8 @@
 #preview {
-    /* background-color: white; */
-    /* width: auto; */
-    height: 100%;
-    /* margin-left: 2rem; */
+    
+    max-height: 1000px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
