@@ -1,5 +1,5 @@
 import "../styles/Header.css";
-
+import React, { useRef } from 'react';
 
 export default function Header({dataCV, setDataCV, setInitialDataCV, skillsFF, educationDataFF, workExperienceFF}) {
 
@@ -27,7 +27,7 @@ export default function Header({dataCV, setDataCV, setInitialDataCV, skillsFF, e
     
             skillsData: [
                 skillsFF(0, "Obsługa programów MS Office (Excel, Word, PowerPoint itp.)"),
-                skillsFF(1, "Obsługa nowoczesnych programów firmy Adobe do zarządzania kosztami firmy"),
+                skillsFF(1, "Obsługa programu Comarch ERP XT"),
                 skillsFF(2, "Znajmość języka angielskiego na poziomie C1")
             ]
         })
@@ -40,7 +40,6 @@ export default function Header({dataCV, setDataCV, setInitialDataCV, skillsFF, e
 
     const printPDF = () => {
         const preview = document.getElementById("sheet");
-        console.log(preview);
         window.print();
     };
 
