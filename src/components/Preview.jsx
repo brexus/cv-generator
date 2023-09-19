@@ -4,10 +4,19 @@ import EducationPreviewItem from "./preview/EducationPreviewItem";
 import WorkExperiencePreviewItem from "./preview/WorkExperciencePreviewItem";
 import SkillsPreviewItem from "./preview/SkillsPreviewItem";
 
-export default function Preview({dataCV, setDataCV}) {
+export default function Preview({dataCV, setDataCV, isSmallScreen, setIsSmallScreen, isPreview}) {
+
+    // 
+    // isPreview ? {display: "flex"} : {display: "none"}
 
     return (
-        <div id="preview">
+        <div 
+            id="preview" 
+            style={{
+                // display: !isSmallScreen ? "flex" : "none",
+                display: !isSmallScreen || (isSmallScreen && isPreview) ? "flex" : "none"
+            }}
+        >
             <div id="sheet">
                 <p id="cv-heading">- CV -</p>
 
@@ -40,12 +49,13 @@ export default function Preview({dataCV, setDataCV}) {
                     <h1 className="section-heading">Skills</h1>
                     <div className="separator"></div>
                     
-                    {dataCV.skillsData.map((item, index) => {
-                        return (
-                            <SkillsPreviewItem key={"skillsPreview" + index} dataCV={dataCV} setDataCV={setDataCV} index={index}/>
-                        );
-                    })}
-                    
+                    <ul id="skills-ul">
+                        {dataCV.skillsData.map((item, index) => {
+                            return (
+                                <SkillsPreviewItem key={"skillsPreview" + index} dataCV={dataCV} setDataCV={setDataCV} index={index}/>
+                            );
+                        })}
+                    </ul>
 
                 </div>
 
