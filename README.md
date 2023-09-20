@@ -19,16 +19,16 @@ HTML, CSS, Vite + React
 
 In order to setup and work on this project on your own, you will need to:
 
-1. Clone this project:
+1. Clone this project:\
 `git clone git@github.com:brexus/cv-generator.git`
 
-2. Change directory
+2. Change directory:\
 `cd cv-generator`
 
-2. Install the required dependencies:
+2. Install the required dependencies:\
 `npm install`
 
-3. A live demo of the project can be launched using:
+3. A live demo of the project can be launched using:\
 `npm run dev`
 
 4. Open the link that appeared in the console, e.g. `http://localhost:5173/`
