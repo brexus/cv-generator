@@ -1,0 +1,20 @@
+#footer {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer svg {
+    fill: rgb(255, 255, 255);
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+#footer svg:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    filter: drop-shadow(0 0 2px #ffffff);
+}
