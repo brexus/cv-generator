@@ -4,7 +4,7 @@ import PersonalData from "./PersonalData";
 import Education from "./Education";
 import WorkExperience from "./WorkExperience";
 import Skills from "./Skills";
-
+import Footer from "./Footer";
 
 export default function Main({dataCV, setDataCV, skillsFF, educationDataFF, workExperienceFF, setInitialDataCV, isSmallScreen, isPreview}) {
     
@@ -112,6 +112,8 @@ export default function Main({dataCV, setDataCV, skillsFF, educationDataFF, work
                     Add new
                 </button>
             </div>
+
+            <Footer />
 
         </div>
     );
