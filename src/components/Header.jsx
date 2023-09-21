@@ -40,7 +40,16 @@ export default function Header({dataCV, setDataCV, setInitialDataCV, skillsFF, e
 
     const printPDF = () => {
         const preview = document.getElementById("sheet");
-        window.print();
+
+        let opt = {
+            margin:       0.5,
+            filename:     'myCV.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { dpi: 96, letterRendering: true },
+            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+          };
+
+        html2pdf().set(opt).from(preview).save();
     };
 
     return (
