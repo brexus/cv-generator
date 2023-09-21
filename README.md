@@ -25,13 +25,13 @@ In order to setup and work on this project on your own, you will need to:
 2. Change directory:\
 `cd cv-generator`
 
-2. Install the required dependencies:\
+3. Install the required dependencies:\
 `npm install`
 
-3. A live demo of the project can be launched using:\
+4. A live demo of the project can be launched using:\
 `npm run dev`
 
-4. Open the link that appeared in the console, e.g. `http://localhost:5173/`
+5. Open the link that appeared in the console, e.g. `http://localhost:5173/`
 
 ## Screenshots
 
