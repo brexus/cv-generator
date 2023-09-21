@@ -61,6 +61,7 @@ button {
 }
 button:hover {
   border-color: #646cff;
+  filter: drop-shadow(0 0 3px #646cff);
 }
 button:focus,
 button:focus-visible {
